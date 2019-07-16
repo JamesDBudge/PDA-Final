@@ -24,14 +24,26 @@ users = {
   }
 }
 
+def printValuesInNestedHash(hash)
+  hash.each do |key, value|
+    puts key
+    value.each do |key, value|
+      puts value
+    end
+  end
+end
+
+printValuesInNestedHash(users)
+
+
 # adding a person to the hash of users
-users[:Alex] ={
-  :first_name => "Alex",
-  :last_name => "Bazlinton",
-  :age => 35,
-  :occupation => "Lead Instructor",
-  :favourite_things => ["Javascript", "Variable Names"]
-}
+# users[:Alex] ={
+#   :first_name => "Alex",
+#   :last_name => "Bazlinton",
+#   :age => 35,
+#   :occupation => "Lead Instructor",
+#   :favourite_things => ["Javascript", "Variable Names"]
+# }
 
 # printing the whole hash to see if the user was added
-p users
+# p users
